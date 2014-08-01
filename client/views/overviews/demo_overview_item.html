@@ -1,0 +1,13 @@
+<template name="demoOverviewItem">
+	 <tr>
+	 	<td>{{ownerRep}}{{ownerRepProfile}}</td>
+		<td>
+		<a href= "{{pathFor 'demoPage'}}">{{sfid}}</a> 
+		<a href="{{sfid}}" class="pull-right" target="blank" title="Open in Salesforce">
+		<img src="/img/salesforce-logo.png" height="16" width="16">
+		</a>
+		</td>
+ 		<td>{{dateset}}</td>
+ 		<td>{{closed}}</td>
+     </tr>
+</template>

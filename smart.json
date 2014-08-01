@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "iron-router": {},
+    "spin": {},
+    "font-awesome": {},
+    "moment": {},
+    "bootstrap3-datepicker": {},
+    "accounts-entry": {},
+    "profile": {},
+    "bootswatch-yeti": {},
+    "houston": {},
+    "sass": {}
+  }
+}

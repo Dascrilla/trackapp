@@ -1,0 +1,45 @@
+<template name="header">
+<div class="navbar navbar-default">
+<div class="navbar-inner col-lg-10 col-md-offset-1 col-md-10">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="{{pathFor 'dayList'}}"><i class="fa fa-lg fa-empire"></i> Sales Dev Tracking</a>
+  </div>
+
+  <div class="navbar-collapse collapse">
+  <ul class="nav navbar-nav pull-right">
+            {{> accountButtons}}
+         </ul>
+{{#if currentUser}}
+    <ul class="nav navbar-nav">
+     <li> <a href="{{pathFor 'demoList'}}"><i class="fa fa-bolt"></i> Demos</a></li> 
+    <li> <a href="{{pathFor 'dayList'}}"><i class="fa fa-calendar"></i> Days</a></li> 
+    </ul>
+ <ul class="nav navbar-nav pull-right">
+  <li class="dropdown open ">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bar-chart-o"></i> Dashboards<b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="{{pathFor 'repsOverview'}}"><i class="fa fa-group"></i> Reps</a></li>
+        <li><a href="{{pathFor 'demosOverview'}}"><i class="fa fa-eye"></i> Team Demos</a></li>
+      </ul>
+  </li>
+</ul>
+{{/if}}
+
+    <!--<form class="navbar-form navbar-left">
+      <input type="text" class="form-control col-lg-8" placeholder="Search">
+    </form> --> 
+
+      
+  </div>
+</div>
+</div>
+
+</template>
+
+

@@ -1,0 +1,63 @@
+<template name="dayEdit"> 
+
+<div class="container"> 
+<div class="row"> 
+
+
+<div class="col-lg-4 col-lg-offset-4 well">
+<form class="form-horizontal main">
+ <fieldset>
+
+<legend>Edit Day</legend>
+<div class="col-lg-10 col-lg-offset-3">
+
+<div class="form-group control-group">
+<label class="control-label" for="date"></label> 
+<div class="controls">
+<input type="text" name="date" value="{{date}}" id="my-datepicker">
+</div>
+</div>
+
+<div class="form-group control-group">
+<label class="control-label" for="calls">Calls</label> 
+<div class="controls">
+<input name="calls" type="number" value="{{calls}}" />
+</div>
+</div>
+
+<div class="form-group control-group">
+<label class="control-label" for="connects">Connects</label> 
+<div class="controls">
+<input name="connects" type="number" value="{{connects}}" />
+</div>
+</div>
+
+<div class="form-group control-group">
+<label class="control-label" for="emails">Emails</label> 
+<div class="controls">
+<input name="emails" type="number" value="{{emails}}" />
+</div>
+</div>
+
+
+<br>
+
+<div class="form-group control-group"> 
+<div class="controls">
+<input type="submit" value="Cancel" class="cancel btn btn-default"/> 
+<input type="submit" value="Update" class="btn btn-info "/>
+<input type="submit" value="Delete" class="btn delete btn-danger"/> 
+</div>
+</div>
+
+</div>
+ </fieldset>
+</form>
+        </div>
+
+
+</div>
+
+  </div>
+
+</template>

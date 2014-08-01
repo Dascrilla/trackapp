@@ -1,0 +1,35 @@
+<template name="dayList">
+<div class="container">
+{{#if daysInCollection}}
+<div class="row">
+  <h2 style="text-align: center">{{thisMonthName}}</h2>
+			{{#each days}}
+				{{#if ownDay}}
+					{{> dayItem}}
+				{{/if}}
+			{{/each}}
+</div>
+
+<div class="row">
+	{{#each daysThisMonth}}
+		{{#if ownDay}}
+			{{> thisMonth}}
+		{{/if}}
+	{{/each}}
+</div>
+
+<a class="btn btn-large btn-success" href="{{pathFor 'daySubmit'}}"><i class="fa fa-plus">New Day</i></a>
+
+{{else}}
+
+<div>
+<div class="jumbotron" style="text-align:center">
+<h2>Create a day to get started!</h2>
+<br>
+<a class="btn btn-large btn-success" href="{{pathFor 'daySubmit'}}"><i class="fa fa-plus"> New Day</i></a>
+</div>
+</div>
+
+{{/if}}
+</div> 
+</template>

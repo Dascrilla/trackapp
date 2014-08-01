@@ -1,0 +1,59 @@
+<template name="demoSubmit"> 
+
+<div class="container"> 
+<div class="row"> 
+
+<div class="col-lg-4 col-lg-offset-4 well">
+<form class="form-horizontal main">
+ <fieldset>
+
+<legend>Add Demo</legend>
+<div class="col-lg-6 col-lg-offset-3">
+
+<div class="form-group control-group">
+<label class="control-label" for="dateset">Date Set</label> 
+<div class="controls">
+<input type="text" name="dateset" id="my-datepicker" value="{{today}}">
+</div>
+</div>
+
+<div class="form-group control-group">
+<label class="control-label" for="sfid">SFID</label> 
+<div class="controls">
+<input name="sfid" type="text" value="" />
+</div>
+</div>
+
+<div class="form-group control-group">
+	<label class="control-label" for="closed">Closed</label>
+	  <select class="form-control form-control-select" name="closed" id="select" value="{{closed}}">
+	    <option value="email">email</option>
+	    <option value="phone">phone</option>
+	  </select>
+</div>   
+
+
+<br>
+<div class="form-group control-group"> 
+<div class="controls">
+<input type="submit" value="Submit" class="btn btn-info"/> 
+<input type="submit" value="Cancel" class="btn cancel"/> 
+</div>
+</div>
+
+</div>
+
+ 	</fieldset>
+	</form>
+</div>
+
+
+ 
+
+  </div>
+	</div>
+</template>
+
+
+
+

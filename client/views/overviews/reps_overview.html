@@ -1,0 +1,30 @@
+<template name="repsOverview">
+<div class="container-fluid">
+<div class="row"> 
+	{{#each users}}
+		{{> rep}}
+	{{/each}}
+</div>
+</div>
+</template>
+
+<template name="rep">
+<div class="col-lg-3">
+ <div class="panel panel-success">
+  <div class="panel-heading">
+
+    <h3 class="panel-title"><a href="#"><i class="fa fa-user"></i> {{repName}} {{repProfileName}}</a></h3>
+
+  </div>
+  <div class="panel-body">
+  
+    <ul class="day-item">
+		<li>Demos Today <span class="badge">{{repDailyDemos}}</span></li>
+		<li>This Week: {{repWeeklyDemos}}</li>
+		<li>This Month: {{repMonthlyDemos}}</li>
+ </ul>
+ 
+</div>
+</div>
+</div>
+</template>
