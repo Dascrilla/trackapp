@@ -34,7 +34,7 @@ today: function(){
   userDailyDemoCount: function(){
   		today = moment().format('MM/DD/YYYY');
   		userId = Meteor.userId(); 
-    	return Demos.find({userId: userId, dateset: today }, {reactive: false}).count(); 
+    	return Demos.find({userId: userId, dateset: today }).count(); 
   	 
   }, 
   
@@ -42,14 +42,14 @@ today: function(){
  		thisMonday = moment().day(1).format('MM/DD/YYYY'),  
  		thisSunday = moment().day(7).format('MM/DD/YYYY'),
  		userId = Meteor.userId();  
- 	return Demos.find({ userId: userId, dateset: {$gte: thisMonday, $lte: thisSunday} }, {reactive: false}).count();
+ 	return Demos.find({ userId: userId, dateset: {$gte: thisMonday, $lte: thisSunday} }).count();
  }, 
 
  userMonthlyDemoCount: function(){
  		theFirst = moment().date(1).format('MM/DD/YYYY'),  
  		theLast = moment().date(31).format('MM/DD/YYYY'), 
  		userId = Meteor.userId();
- 	return Demos.find({ userId: userId, dateset: {$gte: theFirst, $lte: theLast} }, {reactive: false}).count();
+ 	return Demos.find({ userId: userId, dateset: {$gte: theFirst, $lte: theLast} }).count();
  }
 });
 
