@@ -3,7 +3,7 @@
 
 /* Returns the coverage item you want to edit */
 
-Template.dayEdit.rendered=function() {
+Template.dayEdit.rendered = function() {
     $('#my-datepicker').datepicker({
     todayBtn: "linked",
     autoclose: true,

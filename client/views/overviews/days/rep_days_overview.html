@@ -1,24 +1,18 @@
 <template name="repDaysOverview">
 <div class="container">
+
 <div class="row">
 	    <h2>Week of the {{thisWeekName}}</h2>
 			{{#each days}}
-				{{#if ownDay}}
-					{{> dayItem}}
-				{{/if}}
+				{{> repWeekOverview}}
 			{{/each}}
 </div>
 
 <div class="row">
 <h2>Rest of {{thisMonthName}}</h2>
 	{{#each daysThisMonth}}
-		{{#if ownDay}}
-			{{> thisMonth}}
-		{{/if}}
+		{{> repMonthOverview}}
 	{{/each}}
 </div>
-
-	<a class="btn btn-large btn-success" href="{{pathFor 'daySubmit'}}"><i class="fa fa-plus">New Day</i></a>
 </div>
-
 </template>
