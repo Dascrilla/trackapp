@@ -3,6 +3,13 @@
 /* Helper function the checks if a coverage item was published by the current user */
 
 Template.repWeekOverview.helpers({
+  days: function(){
+      return Days.find(); 
+  },
+
+  demos: function(){
+    return Demos.find(); 
+  },
   
   domain: function() {
     var a = document.createElement('a');
@@ -23,13 +30,12 @@ Template.repWeekOverview.helpers({
   },
 
   demosSet: function (){ 
-    thisDay = Days.findOne({_id: this._id}).date;
-    return Demos.find({userId: this._id, dateset: thisDay}).count(); 
+    pathArr = document.location.pathname.split('days/'); 
+    return Demos.find({userId: pathArr[1], dateset: this.date}).count(); 
       }
   });
 
 Template.repMonthOverview.helpers({
-  
   domain: function() {
     var a = document.createElement('a');
     a.href = this.url;
@@ -43,7 +49,8 @@ Template.repMonthOverview.helpers({
   }, 
 
   demosSet: function (){ 
-    return Demos.find({userId: this._id, dateset: this.date}).count();  
+    pathArr = document.location.pathname.split('days/'); 
+    return Demos.find({userId: pathArr[1], dateset: this.date}).count();  
       }
 });
 

@@ -13,18 +13,27 @@
  <div class="panel panel-success">
   <div class="panel-heading">
 
-    <h3 class="panel-title"><a href="{{pathFor 'repDaysOverview'}}"><i class="fa fa-user"></i> {{repName}} {{repProfileName}}</a></h3>
+    <h3 class="panel-title"><i class="fa fa-user"></i> {{repName}} {{repProfileName}}</h3>
 
   </div>
-  <div class="panel-body">
-  
+  <div class="panel-body row" style="margin:2px">
+  	
+  	<div class="pull-left">
     <ul class="day-item">
 		<li>Demos Today <span class="badge">{{repDailyDemos}}</span></li>
 		<li>This Week: {{repWeeklyDemos}}</li>
 		<li>This Month: {{repMonthlyDemos}}</li>
  </ul>
+ </div>
+
+  <div class="pull-right">
+ <a href="{{pathFor 'repDaysOverview'}}" class="btn btn-default btn-xs" title="See Demos"><i class="fa fa-tachometer"></i></a>
+<br>
+  <a href = "{{pathFor 'repDaysOverview'}}" class="btn btn-default btn-xs" title="See Days" style="margin-top: 4px"><i class="fa fa-calendar"></i></a>
+ </div>
  
 </div>
+
 </div>
 </div>
 </template>

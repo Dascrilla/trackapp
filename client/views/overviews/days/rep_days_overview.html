@@ -2,14 +2,12 @@
 <div class="container">
 
 <div class="row">
-	    <h2>Week of the {{thisWeekName}}</h2>
 			{{#each days}}
 				{{> repWeekOverview}}
 			{{/each}}
 </div>
 
 <div class="row">
-<h2>Rest of {{thisMonthName}}</h2>
 	{{#each daysThisMonth}}
 		{{> repMonthOverview}}
 	{{/each}}
